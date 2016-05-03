@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+
+<head>
+	<!-- Standard Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<!-- linking CSS -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Merriweather:700italic' rel='stylesheet' type='text/css'>
+	<link href="semantic/packaged/css/semantic.min.css" rel="stylesheet">
+	<script src="javalib/jquery-2.1.1.min.js"></script>
+	<script src="semantic/packaged/javascript/semantic.min.js"></script>
+	<!-- local dependencies -->
+	<script src="responsiveslides/responsiveslides.min.js"></script>
+	<link href="responsiveslides/responsiveslides.edit.css" rel="stylesheet">
+	<link href="stylemain.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- navigation bar -->
+<div class="ui inverted menu" id="navbar">
+	<a href="index.html" class="item disabled sitetitle">Halaman Kompetisi</a>
+	<!-- link section -->
+	<span class="sitenavshow sitenavlink">
+		<a class="active item" href="index.html">
+			<i class="home icon"></i> Home
+		</a>
+		<a class="item" href="competitions.html">
+			<i class="trophy icon"></i> Competitions
+		</a>
+		<a class="item" href="discussions.html">
+			<i class="chat icon"></i> Discussions
+		</a>
+	</span>
+	<!-- searchbar section -->
+	<span class="sitenavshow sitenavsearch">
+		<div class="right item">
+			<div class="ui icon input"> 
+				<input placeholder="Search..." type="text">
+				<i class="search link icon"></i>
+			</div>
+		</div>
+	</span>
+	<!-- hidden button section -->
+	<span class="sitenavhidden">
+		<div class="ui simple dropdown item"><i class="reorder icon"></i>MENU
+    <div class="menu">
+      <a href="index.html"><div class="item">Home</div></a>
+      <a href="competitions.html"><div class="item">Competition</div></a>
+      <a href="discussions.html"><div class="item">Discussion</div></a>
+    </div></div>
+	</span>
+</div>
+
+<!-- main stage -->
+<div class="two column stackable ui grid" id="mainstage">
+
+	<div class="four wide column" id="sidebar">
+	
+	<div class="ui fluid segment">
+		<div class="ui large top attached purple label">User Login</div>
+			<!-- login form start -->
+			<div class="ui small error message">
+				<p>Incorrect username and/or password combination.
+				<a href=#>Forgot your password?</a></p>
+			</div>
+			<form method="POST" action="catch.php"><div class="ui form">
+				<div class="field">
+					<label>Username</label>
+					<div class="ui small left labeled icon input">
+					<input name="txt_username" placeholder="Username" type="text">
+					<i class="user icon"></i></div>
+				</div>
+				<div class="field">
+					<label>Password</label>
+					<div class="ui small left labeled icon input">
+					<input name="txt_password" placeholder="Password" type="password">
+					<i class="lock icon"></i></div>
+				</div>
+				<div style="padding-left: 10px;">
+					<div class="ui checkbox field">
+						<input name="chk_remember" id="chk_remember" type="checkbox">
+						<label for="chk_remember">Remember me</label>
+					</div><br>
+					<input value="Login" type="submit" class="ui tiny teal button">
+					<a href="register.html"><div class="ui tiny button">Register</div></a>
+				</div>
+			</div></form>
+			<!-- login form end -->
+		</div>
+	
+		<div class="ui segment">
+			<!-- milestone start -->
+			<div class="ui large ribbon purple label">Milestones</div>
+			<p></p>
+			<div style="text-align: center;">
+			<div class="ui icon buttons" id="calendarselect">
+			  <div class="ui small button"><i class="left arrow icon"></i></div>
+				<div class="ui small button" style="min-width:160px;" data-content="Click to select month." data-variation="small">December 2014</div>
+				<div class="ui small button"><i class="right arrow icon"></i></div>
+			</div></div>
+			
+			<table id="milecalendar">
+				<thead><tr><th class="r">S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th class="b">S</th></thead>
+				<tbody>
+					<!-- td.td for today, div.ev for event -->
+					<tr><td class="r"><div class="ev">1</div></td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td class="b">7</td></tr>
+					<tr><td class="r">8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="td">13</td><td class="b">14</td></tr>
+					<tr><td class="r">15</td><td>16</td><td>17</td><td>18</td><td>19</td><td><div class="ev">20</div></td><td class="b">21</td></tr>
+					<tr><td class="r">22</td><td>23</td><td><div class="ev">24</div></td><td>25</td><td>26</td><td>27</td><td class="b">28</td></tr>
+					<tr><td class="r">29</td><td>30</td><td>31</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+				</tbody>
+			</table>
+			<table id="milecalendarinfo">
+				<tr><th>24</th><td><a href=#><div>Pika Pika</div></a></td></tr>
+			</table>
+			<!-- milestone end -->
+			
+			<!-- hottest trends start -->
+			<div class="ui large ribbon purple label">Hottest Trends</div>
+			<div class="ui divided list" id="sidefeed">
+				<!-- an item -->
+				<div class="item">
+					<i class="right arrow icon"></i>
+					<div class="content"><a href=#>
+						<span class="header">Lomba makan pisang</span>
+						<div class="description"><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan cursus nisi nec hendrerit...</i></div>
+						<div class="details"><i class="star icon"></i>4 upvotes&nbsp;&nbsp;<i class="comment icon"></i>120 comments</div>
+					</a></div>
+				</div>
+				<!-- an item -->
+				<div class="item">
+					<i class="right arrow icon"></i>
+					<div class="content"><a href=#>
+						<span class="header">Lomba makan pisang</span>
+						<div class="description"><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan cursus nisi nec hendrerit...</i></div>
+						<div class="details"><i class="star icon"></i>20 upvotes&nbsp;&nbsp;<i class="comment icon"></i>12 comments</div>
+					</a></div>
+				</div>
+				<!-- an item -->
+				<div class="item">
+					<i class="right arrow icon"></i>
+					<div class="content"><a href=#>
+						<span class="header">Lomba makan pisang</span>
+						<div class="description"><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan cursus nisi nec hendrerit...</i></div>
+						<div class="details"><i class="star icon"></i>432 upvotes&nbsp;&nbsp;<i class="comment icon"></i>445 comments</div>
+					</a></div>
+				</div>
+			</div>
+			<!-- hottest trends end -->
+
+		</div>
+	</div>
+	
+	<!-- main content -->
+	<div class="column" id="contentbar">
+		<!-- homepage slider begin -->
+		<div class="imageslidercont">
+      <ul class="rslides" id="imageslider">
+        <li><a href="content.html"><img src="banner.jpg"></a><div class="caption">Lomba Cipika-Cipikian</div></li>
+        <li><a href="content.html"><img src="banner2.jpg" alt=""></a><p class="caption">Ini contoh kalo pake caption sih</p></li>
+        <li><a href="content.html"><img src="banner3.jpg"></a></li>
+				<li><a href="content.html"><img src="banner.jpg"></a></li>
+				<li><a href="content.html"><img src="banner2.jpg"></a></li>
+        <li><a href="content.html"><img src="banner3.jpg"></a></li>
+      </ul>
+    </div>
+		<div class="imagesliderbleed">&nbsp;</div>
+		<!-- homepage slider end -->
+		<div class="ui segment">
+			<h2 class="content">Welcome to Halaman Kompetisi!</h2>
+			<div class="ui divider" style="margin-top:-0.5em"></div>
+			<div style="border: 1px dashed #CCC; padding: 0.5em; background-color: #F3F3F3;">
+				<i><b>Halaman Kompetisi</b> &mdash; Share and dicover wild competitions.</i>
+			</div>
+			<div class="comstyler" style="margin-top:1em; line-height:1.5;">
+				<p style="text-align:justify">Halaman Kompetisi merupakan situs yang menyediakan informasi mengenai kompetisi-kompetisi yang sedang, akan, dan pernah berlangsung. Pengembangan situs ini digagas oleh divisi PTI Badan Eksekutif Mahasiswa Fasilkom UI 2014, menimbang perlunya suatu wadah terpusat sebagai tempat publikasi informasi kompetisi khususnya untuk lingkungan akademik Fasilkom UI. Situs ini dirilis pada bulan September 2014 dan masih dalam tahap pengembangan.
+				<p style="text-align:justify">Melalui situs ini, diharapkan warga akademik Universitas Indonesia terfasilitasi dalam hal pencarian dan publikasi informasi kompetisi. Saran, masukan, dan kontribusi pengguna sekalian akan sangat berguna bagi pengembangan dan nilai guna situs ini. Oleh karena itu, <i>let's start sharing and discovering wild competitions!</i></p>
+			</div>
+		</div>
+		<div id="sitefooter">
+			&copy; 2014 Halaman Kompetisi Project &nbsp;&middot;&nbsp; 
+			<a href="about.html">About</a> &nbsp;&middot;&nbsp;  
+			<a href="contact.html">Contact Us</a>
+		</div>
+	</div>
+</div>	
+	
+<!-- initialize behaviors -->
+<script src="behav-main.js"></script>
+<script src="behav-imageslider.js"></script>
+
+
+</body>
+</html>

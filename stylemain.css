@@ -1,0 +1,1281 @@
+html {
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  position: relative;
+  min-height: 100%;
+	height: 100%;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  color: #555;
+  text-rendering: optimizeLegibility;
+  min-width: 320px;
+	background-color: #eee;
+}
+body a {
+	text-decoration: none;
+}
+
+/* configuring navbar */
+#navbar.ui.menu {
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 0px;
+	-moz-box-shadow: 0 3px 2px 1px #999;
+  -webkit-box-shadow: 0 3px 2px 1px #999;
+  box-shadow: 0 3px 2px 1px #999;
+}
+#navbar.ui.menu a.item {
+	line-height: 29px;
+}
+#navbar.ui.menu > .item.sitetitle {
+	font-size: 14pt;
+	font-family: 'Merriweather', serif;
+	color: white;
+	cursor: pointer;
+	padding-top: 13px;
+	padding-bottom: 13px;
+}
+#navbar.ui.menu > .sitenavshow > .right.item {
+	line-height: 29px;
+	margin-top: -2px;
+}
+#navbar.ui.menu > .sitenavshow > .right.item > .icon.input {
+	vertical-align: middle;
+}
+#navbar.ui.menu > .sitenavhidden {
+	display: none;
+	float: right;
+	margin-top: 6px;
+}
+#navbar.ui.menu .item > .label {
+	padding-top: 0;
+	padding-bottom: 0;
+	background-color: #555;
+}
+#navbar.ui.menu .active.item > .label {
+	background-color: #777;
+}
+
+@media only screen and (max-width: 992px) {
+	#navbar.ui.menu span.sitenavsearch {
+		display: none;
+	}
+}
+@media only screen and (max-width: 720px) {
+	#navbar.ui.menu span.sitenavlink {
+		display: none;
+	}
+	#navbar.ui.menu span.sitenavhidden {
+		display: inline;
+	}
+}
+
+/* configuring mainstage major elements */
+#mainstage {
+	display: table;
+	margin-top: 30px;
+	width: 100%;
+}
+#sidebar {
+	display: table-cell;
+	min-width: 300px;
+}
+#contentbar {
+	display: table-cell;
+	padding-bottom: 16px;
+	width: 100%;
+}
+
+/* configuring sidebar */
+#sidebar > .segment {
+	margin-bottom: 30px;
+}
+#sidebar p {
+	font-size: 10pt;
+}
+#sidebar .message {
+	padding: 1em;
+}
+#sidebar .message a {
+	color: #88a;
+}
+#sidebar .message a:hover {
+	color: #55c;
+	transition: color 0.2s ease;
+}
+
+/* configuring sidebar: user profile */
+#userprofile .detailscont {
+	display: table;
+	height: 4em;
+	margin-bottom: 1em;
+}
+#userprofile .avatarcont {
+	display: table-cell;
+	vertical-align: middle;
+	margin-right: 0.5em;
+	float: left;
+	width: 4em;
+	height: 4em;
+}
+#userprofile .avatar {
+	border-radius: 5px;
+	width: 100%;
+}
+#userprofile .namecont {
+	display: table-cell;
+	vertical-align: top;
+	background-color: #f1f1f1;
+	width: 100%;
+	min-height: 4em;
+	padding: 0.5em 1em;
+	border-radius: 5px;
+}
+#userprofile .namecont .username {
+	font-size: 14pt;
+	font-weight: bold;
+	margin-bottom: 0.1em;
+}
+#userprofile .namecont .handlename {
+	color: #888;
+	font-size: 11pt;
+}
+#userprofile .vertical.menu {
+	width: 100%;
+}
+#userprofile .icon {
+	width: 1em;
+}
+
+/* configuring sidebar: calendar */
+#milecalendar {
+	width: 100%;
+	margin: 1em 0 0.4em;
+	border-collapse: collapse;
+	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	table-layout: fixed;
+}
+#milecalendar thead {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.03);	
+}
+#milecalendar th {
+	background-color: #eee;
+	padding: 0.3em 0.5em;
+}
+#milecalendar th:first-child {
+	border-radius: 5px 0 0;
+}
+#milecalendar th:last-child {
+	border-radius: 0 5px 0 0;
+}
+#milecalendar tr:nth-child(even) td {
+	background-color: #f6f6f6;
+}
+#milecalendar th,
+#milecalendar td {
+	text-align: center;
+}
+#milecalendar th.r,
+#milecalendar td.r {
+	color: #d00;
+}
+#milecalendar th.b,
+#milecalendar td.b {
+	color: #00d;
+}
+#milecalendar td.td {
+	font-weight: bold;
+	text-shadow: 0 0 0.2em lightgray, 0 0 0.2em lightgray;
+}
+#milecalendar div.ev {
+	background-image: url("circle.png");
+	background-size: 100% 100%;
+	border-radius: 5px;
+	height: 100%;
+}
+
+/* configuring sidebar: calendar entries */
+#milecalendarinfo {
+	margin-bottom: 1.5em;
+	font-size: 10pt;
+	border-collapse: separate;
+	width: 100%;
+}
+#milecalendarinfo th {
+	width: 24px;
+	vertical-align: top;
+	text-align: right;
+	padding-right: 5px;
+}
+#milecalendarinfo a {
+	color: #555;
+}
+#milecalendarinfo td {
+	padding-left: 0.5em;
+}
+
+#milecalendarinfo tr:hover th {
+	font-size: 12pt;
+	color: orange;	
+	background-color: rgba(255,255,0,0.2);
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-webkit-border-radius: 7px;
+	transition: background-color 0.2s ease, font-size 0.2s ease;
+}
+#milecalendarinfo tr:hover td {
+	background-color: rgba(255,255,0,0.2);
+	border-radius: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	transition: background-color 0.2s ease, padding 0.2s ease;
+}
+
+/* configuring sidebar: side feeds */
+#sidefeed .item {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+#sidefeed .item,
+#sidefeed i.icon,
+#sidefeed a {
+	font-size: 10pt;
+	color: #555;
+	line-height: 14pt;
+}
+#sidefeed span.header {
+	color: #564F8A;
+	font-size: 11pt;
+}
+#sidefeed div.description {
+	color: #555;
+}
+#sidefeed div.details {
+	color: #555;
+	padding-top: 0.2em;
+}
+
+#sidefeed .item:hover {
+	background-color: rgba(255,255,0,0.2);
+	border-radius: 5px;
+	transition: background-color 0.2s ease;
+}
+#sidefeed .item:hover > .icon {
+	font-size: 20pt;
+	color: orange;
+	margin-right: 0.5em;
+	padding-top: 0.3em;
+	transition: color 0.2s ease, margin-right 0.2s ease, padding-top 0.2s ease;
+}
+#sidefeed .item:hover span.header,
+#sidefeed .item:hover div.details,
+#sidefeed .item:hover div.details .icon {
+	color: darkorange;
+	transition: none;
+}
+
+/* styling site footer */
+#sitefooter {
+	color: #aaa;
+	text-align: center;
+	margin-top: 2em;
+}
+#sitefooter a {
+	color: #99f;
+}
+#sitefooter a:hover {
+	color: #55f;
+}
+
+
+/* ===============<< CONTENT >>=============== */
+
+#maincontent .bannercontainer {
+	max-height: 18em;
+	overflow-y: hidden;
+	width: auto;
+	position: relative;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+#maincontent img.compbanner {
+	width: 100%;
+}
+#maincontent .horizontal.icon.divider {
+	margin-top: 36px;
+}
+
+.bannercontainer .ui.label {
+	border-color: #ddd;
+}
+.bannercontainer .ui.label:hover {
+	border-color: #eee;
+}
+
+/* styling banner modal */
+#modalbanner p {
+	float: right;
+	cursor: pointer;
+}
+#modalbanner div {
+	padding: 10px;
+}
+#modalbanner div img {
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* styling competition footer */
+#maincontent div.compfooter.left {
+	float: left;
+}
+#maincontent div.compfooter.right {
+	float: right;
+}
+#maincontent .compfooter p {
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	color: grey;
+	font-size: 10pt;
+}
+#maincontent .compfooter a {
+	color: #55c;
+}
+#maincontent .compfooter a:hover {
+	color: #88f;
+	transition: color 0.2s ease;
+}
+
+/* styling comment items */
+#maincomment > p.commentnumbar {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+#maincomment > p.commentnumbar > a {
+	cursor: pointer;
+	color: #55c;
+}
+#maincomment > p.commentnumbar > a:hover {
+	color: #88f;
+	transition: color 0.2s ease;
+}
+#maincomment > p.commentnumbar i.icon {
+	margin-right: 0;
+}
+
+#maincomment .comment  {
+	padding-top: 0px;
+	padding-bottom: 15px;
+}
+#maincomment .comment .avatar img {
+	border-radius: 5px;
+	width: 3.2em;
+	height: 3.2em;
+}
+
+#maincomment .comment .author {
+	color: #009FDA;
+}
+#maincomment .comment .author:hover {
+	color: #00BAFF;
+	transition: color 0.2s ease;
+}
+#maincomment .comment .details {
+	border-bottom: 1px solid #dadada;
+	padding-bottom: 5px;
+}
+#maincomment .comment .content {
+	padding-top: 0;
+}
+#maincomment .comment .actions {
+	font-size: 16px;
+	color: rgba(0,0,0,0.4);
+	display: inline-block;
+	margin-left: 4px;
+}
+#maincomment .comment .actions a {
+	color: rgba(0,0,0,0.4);
+	margin-left: 8px;
+	margin-right: 8px;
+}
+#maincomment .comment .actions a:hover {
+	color: rgba(0,0,0,0.6);
+	transition: color 0.2s ease;
+}
+#maincomment .comment .editor textarea,
+#maincomment .comment .editor div.button {
+	margin-top: 0.5em;
+}
+#maincomment .comment .editor div:first-of-type {
+	margin-left: 0.5em;
+}
+
+/* styling comment input box */
+#commentboxcont {
+	padding: 20px 40px;
+}
+#commentboxcont textarea {
+	font-family: "Consolas", "Menlo", "Monaco", "Liberation Mono", monospace, serif;
+	font-size: 11pt;
+	min-height: 10px;
+	height: 10em;
+}
+#commentboxcont a {
+	color: #66f;
+}
+#commentboxcont a:hover {
+	color: #88f;
+}
+#commentboxcont .infotext {
+	color: #aaa;
+	font-size: 10pt;
+}
+
+#commentuser {
+	color: #aaa;
+	margin-bottom: 10px;
+}
+
+
+/* ===============<< FORM >>=============== */
+
+/* styling registration form */
+#accountform,
+#competitionform,
+#genericform {
+	margin: 2em 1em;
+}
+#accountform .section,
+#competitionform .section,
+#genericform .section {
+	margin-top: 30px;
+}
+#accountform input.file,
+#competitionform input.file,
+#genericform input.file {
+	margin-top: 0.6em;
+	display: block;
+	padding: 0.4em;
+	width: 100%;
+	background-color: #f4f4f4;
+	border-radius: 0.2em;
+}
+
+#profiletab.tabular.menu {
+	display: none;
+}
+
+/* styling competition edit form */
+#accountform textarea,
+#competitionform textarea,
+#genericform textarea {
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+#competitionform .imgcont img {
+	width: 50%;
+	padding-bottom: 10px;
+}
+
+/* styling milestone input table */
+#mileinputblock,
+#milenewinputblock {
+	width: 100%;
+	border-collapse: collapse;
+	box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+#mileinputblock {
+	margin-top: 1.5em;
+	margin-bottom: 0.75em;
+}
+#milenewinputblock {
+	margin-bottom: 1.5em;
+}
+
+#mileinputblock tr.header {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+#mileinputblock tr:nth-child(odd) {
+	background-color: #f8f8f8;
+}
+#mileinputblock tr.error {
+	box-shadow: 3px 0px 0px #CD2929 inset;
+}
+#mileinputblock tr.error td {
+	color: #CD2929;
+}
+#mileinputblock tr.error input,
+#milenewinputblock tr.error input {
+	color: #CD2929;
+	transition: color 0.1s ease;
+}
+#mileinputblock th,
+#milenewinputblock th {
+	background-color: #eee;
+	padding: 0.5em 0.8em;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	text-align: left;
+}
+#milenewinputblock th {
+	color: #aaa;
+	font-size: 10pt;
+}
+#mileinputblock th a {
+	padding-left: 0.5em;
+}
+#mileinputblock th div.actiongroup {
+	float: right;
+}
+#mileinputblock td,
+#milenewinputblock td {
+	color: #555;
+	padding: 0.3em 0.8em;
+}
+#mileinputblock td:nth-child(1),
+#milenewinputblock td:nth-child(1) {
+	width: 7em;
+	padding-right: 0.3em;
+}
+#mileinputblock td:last-child,
+#milenewinputblock td:last-child {
+	width: 6.5em;
+	text-align: right;
+	padding-right: 1em;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+#mileinputblock td input,
+#milenewinputblock td input {
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	padding: 0 0;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	background-color: transparent;
+}
+#mileinputblock td input.date,
+#milenewinputblock td input.date {
+	text-align: right;
+	font-weight: bold;
+}
+#milenewinputblock td {
+	background-color: #fdfdfd;
+}
+
+#mileinputblock a,
+#milenewinputblock a {
+	color: #558;
+	cursor: pointer;
+}
+#mileinputblock a:hover,
+#milenewinputblock a:hover {
+	color: #55f;
+	transition: color 0.2s ease;
+}
+
+/* styling generic form */
+#genericform .ui.radio {
+	font-size: 0.875em;
+}
+#genericform .grouped.fields .field {
+	padding-left: 10px;
+}
+
+/* styling ckeditor */
+#ckeditcont span#cke_1_resizer {
+	margin-top: 6px !important;
+}
+#ckeditcont span.cke_combo_arrow {
+	margin-top: 11px !important;
+}
+#ckeditcont span.cke_combo_text,
+#ckeditcont span.cke_toolgroup > a > span {
+	margin-top: 1px !important;
+}
+#ckeditcont textarea.cke_source {
+	font-family: "Consolas", "Menlo", "Monaco", "Liberation Mono", monospace, serif;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+}
+
+
+/* ===============<< TABULAR >>=============== */
+
+/* styling competitionlist table */
+#complisttable {
+	margin-bottom: 1.5em;
+}
+#complisttablehead {
+	margin-top: 1.5em;
+}
+#complisttablepage {
+	margin-bottom: 1.5em;
+}
+
+#complisttable a {
+	color: #558;
+}
+#complisttable a:hover {
+	color: #55f;
+	transition: color 0.2s ease;
+}
+#complisttable a.userlink {
+	font-size: 10pt;
+	font-style: italic;
+}
+
+#complisttable td.pending {
+	color: #ccc;
+}
+#complisttable td.approve {
+	color: #119000;
+}
+#complisttable td.dismiss {
+	color: #CD2929;
+}
+
+#complisttable .actiongroup div {
+	float: left;
+	margin-right: 0.2em;
+}
+#complisttable .statusselector div i.icon,
+#complisttable .actiongroup div i.icon {
+	margin-right: 1px;
+}
+
+#complisttable .statusdropcont .pending {
+	color: #ddd;
+}
+#complisttable .statusdropcont .confirm {
+	color: #119000;
+}
+#complisttable .statusdropcont .dismiss {
+	color: #CD2929;
+}
+
+/* styling my competitions table */
+#mycompblock {
+	width: 100%;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	border-collapse: collapse
+}
+
+#mycompblock tr {
+	border-top: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+}
+#mycompblock tr td {
+	padding: 0.5em 1em;
+}
+#mycompblock tr td:nth-of-type(2) {
+	width: 6em;
+	text-align: right;
+}
+
+/* styling my milestones table */
+.mymileblock {
+	width: 100%;
+	border-collapse: collapse;
+	box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+.mymileblock:last-of-type {
+	margin-bottom: 2em !important;
+}
+
+.mymileblock tr.header {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+.mymileblock tr:nth-child(odd) {
+	background-color: #f6f6f6;
+}
+.mymileblock tr:hover {
+	background-color: rgba(255, 255, 0, 0.2);
+	color: orange;
+}
+
+.mymileblock tr.dim td {
+	color: #bbb;
+}
+.mymileblock tr.red td:first-child {
+	color: #f44;
+}
+.mymileblock tr.blue td:first-child {
+	color: #44f;
+}
+
+.mymileblock tr:hover: {
+	background-color: #fafafa;
+}
+
+.mymileblock th {
+	background-color: #eee;
+	padding: 0.5em 0.8em;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	text-align: left;
+}
+.mymileblock td {
+	color: #555;
+	padding: 0.3em 0.8em;
+}
+
+.mymileblock tr th div.actiongroup {
+	float: right;
+}
+.mymileblock tr td:nth-child(1) {
+	width: 7em;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 0.3em;
+}
+.mymileblock tr td span {
+	font-size: 7pt;
+	float: right;
+	margin-left: 0.3em;
+	width: 1.5em;
+	opacity: 0.4;
+}
+
+.mymileblock a,
+.mymileblock a {
+	color: #558;
+	cursor: pointer;
+}
+.mymileblock a:hover,
+.mymileblock a:hover {
+	color: #55f;
+	transition: color 0.2s ease;
+}
+
+@media only screen and (max-width: 920px) {
+	.mymileblock tr td:nth-child(1) {
+		width: 5em;
+	}
+}
+
+
+/* ===============<< PROFILE PAGE >>=============== */
+
+#profpagetable {
+	width: 100%;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+#profpagetable .avatar {
+	vertical-align: top;
+	width: 180px;
+	height: 180px;
+}
+#profpagetable .avatar img {
+	width: 180px;
+	height: 180px;
+	border-radius: 6px;
+}
+
+#profpagetable .infocont {
+	vertical-align: top;
+	padding-left: 5px;
+}
+#profpagetable .infocont .name {
+	padding: 10px 10px;
+	background-color: #e4e4e4;
+	border-radius: 6px;	
+	border-top-right-radius: 20px;
+}
+#profpagetable .infocont .name .username {
+	font-size: 16pt;
+	font-weight: bold;
+}
+#profpagetable .infocont .field {
+	margin-top: 6px;
+	padding: 10px 10px;
+	background-color: #f3f3f3;
+	border-radius: 6px;
+}
+#profpagetable .infocont .header {
+	font-weight: bold;
+	margin-bottom: 2px;
+}
+
+@media only screen and (max-width: 920px) {
+	#profpagetable .avatar {
+		vertical-align: top;
+		width: 120px;
+		height: 120px;
+	}
+	#profpagetable .avatar img {
+		width: 120px;
+		height: 120px;
+	}
+}
+
+
+/* ===============<< INLINE MENU >>=============== */
+
+/* styling buttons group */
+#buttonsgroup {
+	margin-top: 1.5em;
+	margin-left: 1em;
+	margin-right: 1em;
+	text-align: right;
+}
+#buttonsgroup .left {
+	float: left;
+}
+
+@media only screen and (max-width: 900px) {
+	#buttonsgroup .collapse900 {
+		display: none;
+	}
+}
+
+
+/* ===============<< LISTING >>=============== */
+
+#contentbar .headstat {
+	margin-top: 1.5em;
+}
+
+/* styling cards */
+.card.item {
+	height: 24em;
+	margin-bottom: 20px !important;
+}
+.card.item .image {
+	height: 10em;
+	overflow: hidden;
+}
+.card.item .content {
+	overflow: hidden;
+	height: 10em;
+}
+.card.item .status {
+	margin-top: 10px;
+	padding-top: 5px;
+	padding-left: 0.5em;
+	color: rgba(0, 0, 0, 0.6);
+}
+.card.item .status .tag {
+	float: right;
+	border-radius: 3px;
+	padding: 5px;
+	margin-left: 3px;
+	margin-top: -5px;
+}
+.card.item .status .ended.tag {
+	background-color: #ddd;
+}
+.card.item .status .hot.tag {
+	background-color: #fe5;
+	color: #f80;
+}
+
+/* handling responsivity */
+@media only screen and (max-width: 992px) {
+	#sidebar,
+	#contentbar	{
+		margin-left: 10px !important;
+		margin-right: 10px !important;
+	}
+	.card.item {
+		min-height: 0 !important;
+		height: 18em;
+	}
+	.card.item .image {
+		height: 6em;
+	}
+	.card.item .content {
+		font-size: 10pt;
+		height: 10em;
+	}
+	.card.item .content .name {
+		font-size: 10pt !important;
+	}
+	.card.item .status {
+		font-size: 10pt;
+	}
+	.card.item .status .tag {
+		display: none;
+	}
+}
+
+
+/* ===============<< FEED >>=============== */
+
+#feedcont {
+	margin-top: 2em;
+}
+#feedcont a {
+	color: #33f;
+}
+#feedcont a:hover {
+	color: #00BAFF;
+	transition: color 0.2s ease;
+}
+
+#feedcont .feed {
+  background-color: #fff;
+  line-height: 1.2;
+  font-size: 1em;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  border-bottom: 0.2em solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.33em;
+  -webkit-transition: -webkit-box-shadow 0.2s ease;
+  -moz-transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
+  padding: 0.8em;
+	margin-bottom: 1em;
+}
+#feedcont .feed:hover {
+  z-index: 5;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+	border-bottom-color: #fb0 !important;
+}
+
+#feedcont .feed .avatarcont {
+	float: left;
+}
+#feedcont .feed .avatarcont img {
+	width: 4em;
+	height: 4em;
+	border-radius: 5px;
+}
+#feedcont .feed .contentcont {
+	padding-left: 5em;
+}
+#feedcont .feed .namecont {
+	padding-top: 4px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #ddd;
+}
+#feedcont .feed .namecont span {
+	color: #aaa;
+}
+#feedcont .feed .commentcont {
+	padding-top: 4px;
+	line-height: 17pt;
+}
+
+
+/* ===============<< ABOUT & CONTACT >>=============== */
+
+.creditscont {
+	padding-bottom: 2em;
+}
+.creditscont div.credit {
+	background-color: #eee;
+	width: 22%;
+	display: inline-block;
+	padding: 0.8em 0.5em;
+	margin-bottom: 0.3em;
+	border-radius: 5px;
+	text-align: center;
+	min-width: 200px;
+}
+.creditscont div.credit h4 {
+	margin: 0.3em 0;
+	color: #555;
+}
+.creditscont div.credit span {
+	font-size: 10pt;
+	color: #999;
+}
+
+.questioncont .question {
+	margin-bottom: 0.6em !important;
+}
+
+@media only screen and (max-width: 1024px) {
+	.creditscont div.credit {
+		width: 44%;
+	}
+}
+@media only screen and (max-width: 490px) {
+	.creditscont div.credit {
+		width: 92%;
+	}
+}
+
+
+/* ===============<< STYLE RULE >>=============== */
+
+/* differing rules */
+.constyler h1 {
+	font-size: 1.33rem;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+.constyler h2,
+.constyler h3,
+.constyler h4,
+.constyler h5,
+.constyler h6,
+.comstyler h1,
+.comstyler h2,
+.comstyler h3,
+.comstyler h4,
+.comstyler h5,
+.comstyler h6 {
+	font-size: initial;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+
+/* shared rules */
+.constyler p,
+.comstyler p {
+	margin-top: 0;
+	margin-bottom: 0.5em;
+}
+.constyler a,
+.comstyler a {
+	color: #33f;
+}
+.constyler a:hover,
+.comstyler a:hover {
+	color: #00BAFF;
+}
+.constyler pre,
+.constyler code,
+.comstyler pre,
+.comstyler code {
+	font-family: "Consolas", "Menlo", "Monaco", "Liberation Mono", monospace, serif;
+	background-color: #f3f3f3;
+}
+.constyler pre,
+.comstyler pre {
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	padding: 0.5em;
+	border: 1px dashed #ccc;
+}
+.constyler code,
+.comstyler code {
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+
+.constyler ul,
+.constyler ol,
+.comstyler ul,
+.comstyler ol {
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	padding-left: 1.5em;
+}
+.constyler li,
+.comstyler li {
+	margin-bottom: 0.2em;
+}
+.constyler li p,
+.comstyler li p {
+	margin-bottom: 0.2em;
+}
+
+.constyler hr,
+.comstyler hr {
+	border: 0;
+	height: 1px;
+	color: #aaa;
+	background-color: #aaa;
+}
+
+.constyler blockquote,
+.comstyler blockquote {
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	margin-left: 0;
+	color: #999;
+	border-left: 5px solid #ccc;
+	padding-left: 1em;
+}
+.constyler blockquote blockquote,
+.comstyler blockquote blockquote {
+	margin-top: 0.5em;
+}
+
+.constyler table,
+.comstyler table {
+	width: 100%;
+	margin: 1em 0 0.4em;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.constyler th,
+.comstyler th {
+	background-color: #eee;
+	padding: 0.3em 0.5em;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.constyler td,
+.comstyler td {
+	padding: 0.3em 0.5em;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* styling image */
+.constyler img,
+.comstyler img {
+	max-width: 800px;
+}
+@media only screen and (max-width: 1280px) {
+	.constyler img,
+	.comstyler img {
+		max-width: 700px;
+	}
+}
+@media only screen and (max-width: 1180px) {
+	.constyler img,
+	.comstyler img {
+		max-width: 600px;
+	}
+}
+@media only screen and (max-width: 1080px) {
+	.constyler img,
+	.comstyler img {
+		max-width: 500px;
+	}
+}
+@media only screen and (max-width: 980px) {
+	.constyler img,
+	.comstyler img {
+		max-width: 400px;
+	}
+}
+@media only screen and (max-width: 880px) {
+	.constyler img,
+	.comstyler img {
+		max-width: 300px;
+	}
+}
+@media only screen and (max-width: 440px) {
+	.constyler img,
+	.comstyler img {
+		max-width: 200px;
+	}
+}
+
+
+/* ===============<< SEMANTIC FIX >>=============== */
+
+/* fixing items */
+.ui.three.items > a > .item {
+  width: 31.333%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+.ui.items > a > .item {
+  float: left;
+  padding: 0em;
+  background-color: #fff;
+  line-height: 1.2;
+  font-size: 1em;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  border-bottom: 0.2em solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.33em;
+  -webkit-transition: -webkit-box-shadow 0.2s ease;
+  -moz-transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
+  padding: 0.5em;
+}
+.ui.items .item:hover {
+  cursor: pointer;
+  z-index: 5;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+}
+.ui.items .item:first-child:hover {
+  border-bottom-color: #fb0 !important;
+}
+
+/* fixing group buttons */
+.ui.buttons a .button {
+  float: left;
+  border-radius: 0em !important;
+}
+.ui.buttons a:first-child .button {
+	border-top-left-radius: 0.25em !important;
+	border-bottom-left-radius: 0.25em !important;
+}
+.ui.buttons a:last-child .button {
+	border-top-right-radius: 0.25em !important;
+	border-bottom-right-radius: 0.25em !important;
+}
+
+/* fixing buttons */
+.ui.form input.ui.button {
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	padding-top: 0.325em;
+	padding-bottom: 0.325em;
+}
+.ui.popup .ui.button.popbut {
+	width: initial;
+	padding: 0.5em 1em;
+}
+
+/* fixing textarea */
+.ui.form textarea {
+	font-family: "Consolas", "Menlo", "Monaco", "Liberation Mono", monospace, serif;
+}
+.ui.form textarea.small {
+	min-height: 0;
+	height: 5em;
+	resize: none;
+}
+.ui.form textarea.medium {
+	min-height: 0;
+	height: 8em;
+	resize: none;
+}
+.ui.popup textarea {
+	width: 100%;
+	resize: none;
+	margin-bottom: 0.5em;
+}
+
+/* fixing labels */
+.ui.field label a {
+	color: #55C;
+}
+.ui.field label a:hover {
+	color: #88A;
+}
+
+/* fixing image */
+.ui.form .imgcont.large img {
+	max-width: 500px;
+}
+
+/* fixing icon */
+i.icon.star {
+	margin-right: 0.25em;
+}
+
+@media only screen and (max-width: 920px) {
+	.ui.form .imgcont.large img {
+		max-width: 300px;
+	}
+}
+@media only screen and (max-width: 420px) {
+	.ui.form .imgcont.large img {
+		max-width: 200px;
+	}
+}
+

@@ -1,0 +1,94 @@
+﻿html {
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+/* stying headings */
+h1 {
+	font-size: 1.33rem;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: initial;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+
+/* shared text blocks */
+p {
+	margin-top: 0;
+	margin-bottom: 0.5em;
+}
+a {
+	color: #33f;
+}
+
+pre,
+code {
+	font-family: "Consolas", "Menlo", "Monaco", "Liberation Mono", monospace, serif;
+	background-color: #f3f3f3;
+}
+pre {
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	padding: 0.5em;
+	border: 1px dashed #ccc;
+}
+code {
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+blockquote {
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	margin-left: 0;
+	color: #999;
+	border-left: 5px solid #ccc;
+	padding-left: 1em;
+}
+blockquote blockquote {
+	margin-top: 0.5em;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	color: #aaa;
+	background-color: #aaa;
+}
+
+/* styling lists */
+ul,
+ol {
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	padding-left: 1.5em;
+}
+li {
+	margin-bottom: 0.2em;
+}
+li p {
+	margin-bottom: 0.2em;
+}
+
+/* styling tables */
+table {
+	width: 100%;
+	margin: 1em 0 0.4em;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+th {
+	background-color: #eee;
+	padding: 0.3em 0.5em;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+td {
+	padding: 0.3em 0.5em;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,140 @@
+/* styling slider core */
+.rslides {
+	margin: 0 auto;
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+	height: 30em;
+	padding: 0;
+	margin: 0;
+	border-radius: 8px;
+	-webkit-box-shadow: 0 0 15px -3px #333;
+	-moz-box-shadow: 0 0 15px -3px #333;
+	box-shadow: 0 0 15px -3px #333;
+}
+.rslides li {
+	-webkit-backface-visibility: hidden;
+	position: absolute;
+	display: none;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+.rslides li:first-child {
+	position: relative;
+	display: block;
+	float: left;
+}
+.rslides img {
+	display: block;
+	height: auto;
+	float: left;
+	width: 100%;
+	border: 0;
+	z-index: 1;
+}
+
+@media only screen and (max-width: 992px) {
+	.rslides {
+		height: 24em;
+	}
+}
+@media only screen and (max-width: 720px) {
+	.rslides {
+		height: 18em;
+	}
+}
+.imagesliderbleed  {
+	margin-bottom: -2em;
+}
+
+/* styling slider pager */
+.centered-btns_nav {
+	z-index: 3;
+	position: absolute;
+	margin-top: -45px;
+	top: 50%;
+	opacity: 0.5;
+	text-indent: -9999px;
+	overflow: hidden;
+	text-decoration: none;
+	height: 61px;
+	width: 38px;
+	background: transparent url("responsiveslides/themes.gif") no-repeat left top;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.centered-btns_nav:nth-of-type(1) {
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+.centered-btns_nav:nth-of-type(2) {
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+.centered-btns_nav:hover {
+	opacity: 0.7;
+	transition: opacity 0.2s ease;
+}
+.centered-btns_nav:active {
+	opacity: 1;
+}
+.centered-btns_nav.next {
+	left: auto;
+	background-position: right top;
+	right: 0;
+}
+
+.centered-btns_tabs {
+	margin-top: 10px;
+	text-align: center;
+}
+.centered-btns_tabs li {
+	display: inline;
+	float: none;
+	_float: left;
+	*float: left;
+	margin-right: 5px;
+}
+.centered-btns_tabs a {
+	text-indent: -9999px;
+	overflow: hidden;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	background: #ccc;
+	background: rgba(0,0,0, .2);
+	display: inline-block;
+	_display: block;
+	*display: block;
+	-webkit-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+	-moz-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+	box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+	width: 40px;
+	height: 10px;
+}
+
+.centered-btns_here a {
+	background: #222;
+	background: rgba(0,0,0, 0.8);
+}
+
+/* styling slider caption */
+.imageslidercont {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+.imageslidercont .caption {
+	display: block;
+	position: absolute;
+	padding: 10px 20px;
+	margin: 0px;
+	color: #FFF;
+	font-size: 14pt;
+	background: none repeat scroll 0% 0% rgba(0,0,0,0.6);
+	border-bottom-right-radius: 8px;
+	max-width: none;
+	z-index: 2;
+}

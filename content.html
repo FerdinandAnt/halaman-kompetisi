@@ -1,0 +1,314 @@
+<!doctype html>
+<html>
+
+<head>
+	<!-- Standard Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<!-- linking CSS -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Merriweather:700italic' rel='stylesheet' type='text/css'>
+	<link href="semantic/packaged/css/semantic.min.css" rel="stylesheet">
+	<script src="javalib/jquery-2.1.1.min.js"></script>
+	<script src="semantic/packaged/javascript/semantic.min.js"></script>
+	<!-- local dependencies -->
+	<link href="stylemain.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- navigation bar -->
+<div class="ui inverted menu" id="navbar">
+	<a href="index.html" class="item disabled sitetitle">Halaman Kompetisi</a>
+	<!-- link section -->
+	<span class="sitenavshow sitenavlink">
+		<a class="item" href="index.html">
+			<i class="home icon"></i> Home
+		</a>
+		<a class="item" href="competitions.html">
+			<i class="trophy icon"></i> Competitions
+		</a>
+		<a class="item" href=#>
+			<i class="chat icon"></i> Discussions
+		</a>
+	</span>
+	<!-- searchbar section -->
+	<span class="sitenavshow sitenavsearch">
+		<div class="right item">
+			<div class="ui icon input"> 
+				<input placeholder="Search..." type="text">
+				<i class="search link icon"></i>
+			</div>
+		</div>
+	</span>
+	<!-- hidden button section -->
+	<span class="sitenavhidden">
+		<div class="ui simple dropdown item"><i class="reorder icon"></i>MENU
+    <div class="menu">
+      <a href="index.html"><div class="item">Home</div></a>
+      <a href="competitions.html"><div class="item">Competition</div></a>
+      <a href=#><div class="item">Discussion</div></a>
+    </div></div>
+	</span>
+</div>
+
+<!-- main stage -->
+<div class="two column stackable ui grid" id="mainstage">
+
+	<div class="four wide column" id="sidebar">
+	
+	<div class="ui fluid segment">
+		<div class="ui large top attached purple label">User Login</div>
+			<!-- login form start -->
+			<form method="POST" action="catch.php"><div class="ui form">
+				<div class="field">
+					<label>Username</label>
+					<div class="ui small left labeled icon input">
+					<input name="txt_username" placeholder="Username" type="text">
+					<i class="user icon"></i></div>
+				</div>
+				<div class="field">
+					<label>Password</label>
+					<div class="ui small left labeled icon input">
+					<input name="txt_password" placeholder="Password" type="password">
+					<i class="lock icon"></i></div>
+				</div>
+				<div style="padding-left: 10px;">
+					<div class="ui checkbox field">
+						<input name="chk_remember" id="chk_remember" type="checkbox">
+						<label for="chk_remember">Remember me</label>
+					</div><br>
+					<input value="Login" type="submit" class="ui tiny teal button">
+					<a href="register.html"><div class="ui tiny button">Register</div></a>
+				</div>
+			</div></form>
+			<!-- login form end -->
+		</div>
+	
+		<div class="ui segment">
+			<!-- milestone start -->
+			<div class="ui large ribbon purple label">Milestones</div>
+			<p></p>
+			<div style="text-align: center;">
+			<div class="ui icon buttons" id="calendarselect">
+			  <div class="ui small button"><i class="left arrow icon"></i></div>
+				<div class="ui small button" style="min-width:160px;" data-content="Click to select month." data-variation="small">December 2014</div>
+				<div class="ui small button"><i class="right arrow icon"></i></div>
+			</div></div>
+			
+			<table id="milecalendar">
+				<thead><tr><th class="r">S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th class="b">S</th></thead>
+				<tbody>
+					<!-- td.td for today, div.ev for event -->
+					<tr><td class="r"><div class="ev">1</div></td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td class="b">7</td></tr>
+					<tr><td class="r">8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="td">13</td><td class="b">14</td></tr>
+					<tr><td class="r">15</td><td>16</td><td>17</td><td>18</td><td>19</td><td><div class="ev">20</div></td><td class="b">21</td></tr>
+					<tr><td class="r">22</td><td>23</td><td><div class="ev">24</div></td><td>25</td><td>26</td><td>27</td><td class="b">28</td></tr>
+					<tr><td class="r">29</td><td>30</td><td>31</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+				</tbody>
+			</table>
+			<table id="milecalendarinfo">
+				<tr><th>1</th><td><a href=#><div>Acara apa pun jadi: Bagi-Bagi Siomay (bayar sendiri)</div></a></td></tr>
+				<tr><th>20</th><td><a href=#><div>Lomba makan beling: Pendaftaran</div></a></td></tr>
+				<tr><th>20</th><td><a href=#><div>Lomba makan kelereng di Lorem Ipsum dolor Sit Amet Constitutor: Pengumuman Pemenang</div></a></td></tr>
+				<tr><th>24</th><td><a href=#><div>Pika Pika</div></a></td></tr>
+			</table>
+			<!-- milestone end -->
+			
+			<!-- hottest trends start -->
+			<div class="ui large ribbon purple label">Hottest Trends</div>
+			<div class="ui divided list" id="sidefeed">
+				<!-- an item -->
+				<div class="item">
+					<i class="right arrow icon"></i>
+					<div class="content"><a href=#>
+						<span class="header">Lomba makan pisang</span>
+						<div class="description"><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan cursus nisi nec hendrerit...</i></div>
+						<div class="details"><i class="star icon"></i>4 upvotes&nbsp;&nbsp;<i class="comment icon"></i>120 comments</div>
+					</a></div>
+				</div>
+				<!-- an item -->
+				<div class="item">
+					<i class="right arrow icon"></i>
+					<div class="content"><a href=#>
+						<span class="header">Lomba makan pisang</span>
+						<div class="description"><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan cursus nisi nec hendrerit...</i></div>
+						<div class="details"><i class="star icon"></i>20 upvotes&nbsp;&nbsp;<i class="comment icon"></i>12 comments</div>
+					</a></div>
+				</div>
+				<!-- an item -->
+				<div class="item">
+					<i class="right arrow icon"></i>
+					<div class="content"><a href=#>
+						<span class="header">Lomba makan pisang</span>
+						<div class="description"><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan cursus nisi nec hendrerit...</i></div>
+						<div class="details"><i class="star icon"></i>432 upvotes&nbsp;&nbsp;<i class="comment icon"></i>445 comments</div>
+					</a></div>
+				</div>
+			</div>
+			<!-- hottest trends end -->
+		</div>
+	</div>
+	
+	<!-- main content -->
+	<div class="column" id="contentbar">
+		<div class="ui segment" id="maincontent">
+			<h1>Cipika Cipiki</h1>
+			<!-- competition banner -->
+			<div class="bannercontainer" onmouseover="bannerhover()" onmouseout="bannerout()" onclick="bannerclick()">
+				<div class="ui right huge corner label bannermag" id="bannermag"><i class="search icon"></i></div>
+				<img class="ui image compbanner" src="banner.jpg">
+			</div>
+			<!-- hidden modal -->
+			<div class="ui banner modal" id="modalbanner">
+				<p><i class="large close icon"></i></p>
+				<div><img class="ui rounded image" src="banner.jpg"></div>
+			</div>
+			<!-- competition info -->
+			<div class="content constyler">
+				<h1>Brief Information</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan cursus nisi nec hendrerit. Nullam non dignissim lectus. Vivamus a aliquam lorem. Integer id posuere velit. Ut laoreet pellentesque lectus, sit amet mollis felis sodales aliquam. Sed quam mauris, euismod ut tortor vel, bibendum ornare leo. Fusce vestibulum facilisis mi eu molestie. Quisque convallis feugiat erat, dignissim pharetra urna venenatis accumsan. Praesent non malesuada leo. Nunc vulputate sem at urna condimentum, sed accumsan urna vestibulum. Curabitur commodo et metus in facilisis. Vestibulum eu pharetra tellus, nec convallis libero. Vestibulum dapibus aliquet orci in tincidunt.</p>
+				<p>Vivamus viverra dignissim nisl eget facilisis. Mauris eget lectus ullamcorper, cursus justo porttitor, semper velit. Donec rutrum lacinia orci, vel luctus orci rhoncus pulvinar. Sed nec porta nisi, in consectetur metus. Nunc vel diam semper, hendrerit nulla ac, pulvinar enim. Donec luctus urna eu molestie lobortis. Pellentesque faucibus commodo quam eu congue. Mauris sed lacus sit amet risus hendrerit rhoncus. Aliquam bibendum scelerisque magna, eget facilisis turpis porta nec. Integer felis mauris, viverra hendrerit metus vitae, iaculis bibendum arcu. Cras vitae enim ipsum. Praesent quis risus vehicula, egestas mi vel, lobortis libero. Aenean tincidunt lobortis scelerisque.</p>
+				<h1>Registration</h1>
+				<p>Quisque mollis sapien metus. Nullam fermentum velit diam, vel blandit felis auctor in. Fusce ac blandit nisl, eget consequat ante. Ut venenatis bibendum metus sit amet congue. Quisque nec quam vitae leo vehicula auctor. Aenean fringilla nisl orci, sed congue neque ultricies vitae. Vestibulum orci orci, lobortis sed est at, hendrerit interdum tortor. Quisque non ornare lacus. Cras lobortis eleifend dolor, sit amet sollicitudin ligula luctus sit amet. Etiam vel lorem eu nisl adipiscing facilisis eu dictum nisi.</p>
+				<p>Pellentesque leo lorem, auctor ac purus et, congue scelerisque sem. Curabitur ut sapien ut turpis ornare porta. Nunc bibendum mattis dictum. Integer nec dui dignissim, iaculis arcu quis, dignissim odio. Ut pellentesque risus vitae odio imperdiet consectetur. Nulla facilisi. Nam vel massa quis dui iaculis fermentum sed at augue.</p>
+				<p>Nam a nibh vitae erat venenatis laoreet sed non enim. Quisque justo nisl, lobortis tempus auctor et, pretium eget ante. Suspendisse potenti. Etiam molestie mi arcu, id laoreet libero tempus cursus. Praesent et imperdiet odio, vitae consequat nisi. Pellentesque quis sodales neque. Vivamus consequat elit vitae lobortis elementum. Nam hendrerit venenatis diam, quis consectetur felis lobortis ac. Fusce varius lorem non adipiscing ultrices. Proin ac sodales arcu.</p>
+			</div>
+			
+			<!-- competition info footer -->
+			<div class="ui horizontal icon divider"><i class="circular heart icon"></i></div>
+			<div class="compfooter left">
+				<div class="ui tiny toggle icon button" id="upvotebutton" onclick="butupvotedown()"><i class="star icon"></i> Upvote This!</div>
+				<div class="ui tiny toggle icon button" id="followbutton" onclick="butfollowdown()"><i class="briefcase icon"></i> Follow</div>
+				<p><i class="add sign box icon"></i>40 upvotes &middot; 20 followers</p>
+			</div>
+			<div class="compfooter right">
+				<div class="ui tiny facebook icon button"><i class="facebook icon"></i> Facebook</div>
+				<div class="ui tiny twitter icon button"><i class="twitter icon"></i> Twitter</div>
+				<div class="ui tiny google plus icon button"><i class="google plus icon"></i> Google+</div>
+				<p><i class="globe icon"></i>Sharing doesn't hurt your internet quota.</p>
+			</div>
+		</div>
+					
+		<!-- comment section begin -->
+		<div class="ui segment" id="maincomment">
+			<div class="ui huge red ribbon label">Comments</div>
+			<p class="commentnumbar">Showing 2 of 2 comments. <a href=#><i class="repeat icon"></i>Load more?</a></p>
+			
+			<!-- comment item -->
+			<div class="ui comments" id="com_0">
+			<div class="comment">
+				<a class="avatar"><img src="avatar.jpg"></a>
+				<div class="content">
+					<div class="details">
+						<a class="author" href="profilepage.html">Dog Doggington</a>
+						<div class="metadata">2 days ago</div>
+						<div class="actions">&middot;<a class="editbut" onclick="buteditdown(0)">Edit</a>&middot;<a class="deletebut" onclick="butdeletedown(0)">Delete</a></div>
+					</div>
+					<div class="editor"></div>
+					<div class="text comstyler">
+						Suspendisse at mauris at diam imperdiet hendrerit et ut arcu. Ut commodo nibh non enim sagittis, at sodales leo facilisis. Mauris ornare tincidunt erat. Maecenas tristique non libero ut mattis. Nunc nec massa ac augue porta facilisis. Donec nec dolor nec sapien placerat fermentum eget nec justo. Praesent viverra eu turpis et molestie.
+					</div>
+				</div>
+			</div></div>
+						
+			<!-- comment item -->
+			<div class="ui comments" id="com_1">
+			<div class="comment">
+				<a class="avatar"><img src="avatar.jpg"></a>
+				<div class="content">
+					<div class="details">
+						<a class="author" href="profilepage.html">Dog Doggington</a>
+						<div class="metadata">2 days ago</div>
+						<div class="actions">&middot;<a class="editbut" onclick="buteditdown(1)">Edit</a>&middot;<a class="deletebut" onclick="butdeletedown(1)">Delete</a></div>
+					</div>
+					<div class="editor"></div>
+					<div class="text comstyler">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<h1>This is H1.</h1>
+						<p>Sed commodo purus lorem, ac accumsan turpis luctus vel. Duis lacus nibh, interdum quis mi ut, porta rhoncus velit. Nulla vitae lectus faucibus, euismod erat et, lacinia elit. Donec ut nisi non elit ultrices scelerisque. Etiam convallis sapien ac tincidunt ornare. Cras suscipit viverra dolor nec iaculis. Quisque ut velit id erat facilisis lobortis. Sed dignissim felis id mauris fringilla laoreet. </p>
+						<p>Nullam facilisis porta libero, id sollicitudin sapien elementum quis. Nulla id urna nec eros luctus tristique. Donec rhoncus ipsum tellus, nec interdum lectus dapibus eu. Duis sapien lorem, eleifend quis turpis bibendum, venenatis pellentesque magna. Donec tempus ornare sem, ac tempus dui. Duis tempor elementum fermentum. Donec turpis metus, aliquam quis magna tincidunt, rutrum ullamcorper nibh. Sed vitae laoreet metus. Curabitur sit amet nisi diam. Nunc mauris eros, suscipit eget nunc quis, tempor ultricies libero. Donec mattis velit sed condimentum ornare. </p>
+						<h2>This is H2. Why So Small?!</h2>
+						<p>Because bigger font sizes may...<br>... ruin our formatting efforts :/</p>
+						<h3>Now testing lists:</h3>
+						<ul>
+							<li>Nullam facilisis porta libero, id sollicitudin sapien elementum quis. Nulla id urna nec eros luctus tristique. Donec rhoncus ipsum tellus, nec interdum lectus dapibus eu.</li>
+							<li>Nullam facilisis porta libero, id sollicitudin sapien elementum quis. Nulla id urna nec eros luctus tristique. Donec rhoncus ipsum tellus, nec interdum lectus dapibus eu.</li>
+							<li><p>This list item contains three paragraphs. Nullam facilisis porta libero, id sollicitudin sapien elementum quis. Nulla id urna nec eros luctus tristique. Donec rhoncus ipsum tellus, nec interdum lectus dapibus eu.</p><p>Nullam facilisis porta libero, id sollicitudin sapien elementum quis. Nulla id urna nec eros luctus tristique. Donec rhoncus ipsum tellus, nec interdum lectus dapibus eu.</p><p>Nullam facilisis porta libero, id sollicitudin sapien elementum quis. Nulla id urna nec eros luctus tristique. Donec rhoncus ipsum tellus, nec interdum lectus dapibus eu.</p></li>
+						</ul>
+						<ol>
+							<li>Nullam facilisis porta libero, id sollicitudin sapien elementum quis. Nulla id urna nec eros luctus tristique. Donec rhoncus ipsum tellus, nec interdum lectus dapibus eu.</li>
+							<li>Nullam facilisis porta libero, id sollicitudin sapien elementum quis. Nulla id urna nec eros luctus tristique. Donec rhoncus ipsum tellus, nec interdum lectus dapibus eu.</li>
+							<li>Nullam facilisis porta libero, id sollicitudin sapien elementum quis. Nulla id urna nec eros luctus tristique. Donec rhoncus ipsum tellus, nec interdum lectus dapibus eu.</li>
+						</ol>
+						<h3>Now testing blockquote:</h3>
+						<blockquote>
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+							<blockquote>
+								For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+								<blockquote>
+									For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+								</blockquote>
+							</blockquote>
+							<blockquote>
+								For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+							</blockquote>
+						</blockquote>
+						<h4>Horizontal ruler, anyone?</h4>
+						<p>Separated by a horizontal ruler~</p>
+						<hr>
+						<p>Some kind of <a href=#>link link link</a><p>
+						<p>And kind of <code>code code code</code><p>
+						<pre>I wonder what this button do?</pre>
+						<h5>Pictures</h5>
+						<p>Hardcoded <code>width:50%</code> in the css...<p>
+						<p>I've tried using <code>max-width:100%</code>, but it didn't limit the size of the image in my browser T_T (overflow still occurs and... the comment-section container kinda broke down :/)<p>
+						<img src="banner.jpg">
+						<h5>How 'bout tables?!</h5>
+						<table>
+							<tr><th>Team A</th><th>Team B</th><th>Score</th></tr>
+							<tr><td>Jill</td><td>Smith</td><td>50</td></tr>
+							<tr><td>Eve</td><td>Jackson</td><td>94</td></tr>
+							<tr><td>John</td><td>Doe</td><td>80</td></tr>
+						</table>
+					</div>
+				</div>
+			</div></div>
+			
+			<!-- comment item -->
+			<div class="ui comments" id="com_3">
+			<div class="comment">
+				<a class="avatar"><img src="avatar.jpg"></a>
+				<div class="content">
+					<div class="details">
+						<a class="author" href="profilepage.html">Dog Doggington</a>
+						<div class="metadata">2 days ago</div>
+					</div>
+					<div class="editor"></div>
+					<div class="text comstyler">
+						Suspendisse at mauris at diam imperdiet hendrerit et ut arcu. Ut commodo nibh non enim sagittis, at sodales leo facilisis. Mauris ornare tincidunt erat. Maecenas tristique non libero ut mattis. Nunc nec massa ac augue porta facilisis. Donec nec dolor nec sapien placerat fermentum eget nec justo. Praesent viverra eu turpis et molestie.
+					</div>
+				</div>
+			</div></div>
+			
+			<!-- comment input box -->
+			<form class="ui reply form" id="commentboxcont">
+				<div id="commentuser"><i class="user icon"></i>Logged in as <b>CipikaUser</b></div>
+				<div class="field">
+					<textarea placeholder="Have something to say?"></textarea>
+					<div class="infotext">* Comments are rendered using <a href="http://daringfireball.net/projects/markdown/">Markdown.</a> Formatting cheatsheet is provided <a href="http://daringfireball.net/projects/markdown/syntax">here</a>.</div>
+				</div>
+				<div class="ui tiny button teal submit">Post Comment</div>
+			</form>			
+		</div>
+		<!-- comment section end -->
+	</div>
+</div>	
+	
+<!-- initialize behaviors -->
+<script src="behav-main.js"></script>
+<script src="behav-content.js"></script>
+
+</body>
+</html>

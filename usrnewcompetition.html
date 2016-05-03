@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+
+<head>
+	<!-- Standard Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<!-- linking CSS -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Merriweather:700italic' rel='stylesheet' type='text/css'>
+	<link href="semantic/packaged/css/semantic.min.css" rel="stylesheet">
+	<script src="javalib/jquery-2.1.1.min.js"></script>
+	<script src="semantic/packaged/javascript/semantic.min.js"></script>
+	<!-- local dependencies -->
+	<script src="ckeditor/ckeditor.js"></script>
+	<script src="zebradatepicker/zebra_datepicker.js"></script>
+	<script src="zebradatepicker/custom_preload.js"></script>
+	<link href="zebradatepicker/css/metallic.css" rel="stylesheet">
+	<link href="stylemain.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- navigation bar -->
+<div class="ui inverted menu" id="navbar">
+	<a href="index.html" class="item disabled sitetitle">Halaman Kompetisi</a>
+	<!-- link section -->
+	<span class="sitenavshow sitenavlink">
+		<a class="item" href="index.html">
+			<i class="home icon"></i> Home
+		</a>
+		<a class="item" href="competitions.html">
+			<i class="trophy icon"></i> Competitions
+			<div class="ui label">2</div>
+		</a>
+		<a class="item" href=#>
+			<i class="chat icon"></i> Discussions
+			<div class="ui label">12</div>
+		</a>
+	</span>
+	<!-- searchbar section -->
+	<span class="sitenavshow sitenavsearch">
+		<div class="right item">
+			<div class="ui icon input"> 
+				<input placeholder="Search..." type="text">
+				<i class="search link icon"></i>
+			</div>
+		</div>
+	</span>
+	<!-- hidden button section -->
+	<span class="sitenavhidden">
+		<div class="ui simple dropdown item"><i class="reorder icon"></i>MENU
+    <div class="menu">
+      <a href="index.html"><div class="item">Home</div></a>
+      <a href="competition.html"><div class="item">Competition</div></a>
+      <a href=#><div class="item">Discussion</div></a>
+    </div></div>
+	</span>
+</div>
+
+<!-- main stage -->
+<div class="two column stackable ui grid" id="mainstage">
+
+	<div class="four wide column" id="sidebar">
+	
+		<div class="ui segment">
+			<!-- userprofile start -->
+			<div class="ui large top attached purple label">Your Profile</div>
+			<div id="userprofile">
+				<!-- details section -->
+				<div class="detailscont">
+					<div class="avatarcont">
+						<img src="avatar.jpg" class="avatar">
+					</div>
+					<div class="namecont">
+						<div class="username">CipikaUser</div>
+						<div class="handlename">Senang Cipika-Cipiki</div>
+					</div>
+				</div>
+				<!-- menu section -->
+				<div class="ui vertical menu">
+					<a href="usrnewcompetition.html" class="active teal item">Submit New Competition</a>
+					<a href="usrcompetitionlist.html" class="teal item">My Submitted Competitions</a>
+				</div>
+				<div class="ui vertical menu">
+					<a href="usrmessagelist.html" class="teal item">Messages<div class="ui teal label">1</div></a>
+					<a href="usrmymilestones.html" class="teal item">My Milestones<div class="ui teal label">2</div></a>
+					<a href="usrmycompetitions.html" class="teal item">My Competitions</a>
+					<a href="profile.html" class="teal item">Account Settings</a>
+				</div>
+				<!-- logout section -->
+				<div style="padding-left: 10px;">
+					<a href=#><div class="ui tiny teal button">Logout</div></a>
+				</div>
+			</div>
+			<!-- userprofile end -->
+		</div>
+	
+		<div class="ui segment">
+			<!-- milestone start -->
+			<div class="ui large ribbon purple label">Milestones</div>
+			<p></p>
+			<div style="text-align: center;">
+			<div class="ui icon buttons" id="calendarselect">
+				<div class="ui small button"><i class="left arrow icon"></i></div>
+				<div class="ui small button" style="min-width:160px;" data-content="Click to select month." data-variation="small">December 2014</div>
+				<div class="ui small button"><i class="right arrow icon"></i></div>
+			</div></div>
+			
+			<table id="milecalendar">
+				<thead><tr><th class="r">S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th class="b">S</th></thead>
+				<tbody>
+					<tr><td class="r">1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td class="b">7</td></tr>
+					<tr><td class="r">8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td class="b">14</td></tr>
+					<tr><td class="r">15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td class="b">21</td></tr>
+					<tr><td class="r">22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td class="b">28</td></tr>
+					<tr><td class="r">29</td><td>30</td><td>31</td><td> </td><td> </td><td> </td><td> </td></tr>
+				</tbody>
+			</table>
+			<table id="milecalendarinfo">
+				<tr><th>20</th><td><a href=#>Lomba makan beling: Pendaftaran</a></td></tr>
+				<tr><th>20</th><td><a href=#>Lomba makan kelereng di Lorem Ipsum dolor Sit Amet Constitutor: Pengumuman Pemenang</a></td></tr>
+				<tr><th>24</th><td><a href=#>Pika Pika</a></td></tr>
+			</table>
+			<!-- milestone end -->
+			
+			<!-- hottest trends start -->
+			<div class="ui large ribbon purple label">Competitions Followed</div>
+			<!-- hottest trends end -->
+			<div class="ui divided list" id="sidefeed">
+				<div class="item">
+					<i class="trophy icon"></i>
+					<div class="content">
+					<a href=#><span class="header">Lomba makan pisang</span>
+					<div class="description"><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan cursus nisi nec hendrerit...</i></div></a></div>
+				</div>
+				
+				<div class="item">
+					<i class="trophy icon"></i>
+					<div class="content">
+					<a href=#><span class="header">Lomba makan bubur</span>
+					<div class="description"><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan cursus nisi nec hendrerit...</i></div></a></div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<!-- main content -->
+	<div class="column" id="contentbar">
+		<div class="ui segment" id="maincontent">
+			<!-- general message -->
+			<div class="ui icon message">
+				<i class="edit icon"></i>
+				<div class="content">
+					<div class="header">Submit New Competition</div>
+					<p>Know upcoming competition? Help us spread the words!</p>
+				</div>
+			</div>
+			<!-- competition edit form start -->
+			<form method="POST" action="catch.php"><div class="ui form" id="competitionform">
+				<!-- section 1 -->
+				<div class="section">
+					<h3 class="ui header">Basic Informations</h3>
+					<div class="field">
+						<label>Competition Name</label>
+						<div class="ui labeled input">
+							<input name="txt_compname" placeholder="Competition Name" type="text" value=""
+							data-content="This also acts as the title of your post.">
+							<div class="ui corner label"><i class="asterisk icon"></i></div>
+						</div>
+					</div>
+					<div class="field">
+						<label>Competition Summary <span style="float:right" id="teasercount">140 remaining</span></label>
+						<textarea name="txt_compteaser" class="small" id="txt_compteaser" onkeyup="countteaser()"
+						placeholder="Write short description about the competition..." maxlength=140
+						data-content="This will help people get the overall idea of the competition."></textarea>
+					</div>
+					<div class="field">
+						<label>Competition End Date</label>
+						<div class="ui input">
+							<input name="txt_compname" class="datepicker" placeholder="Enter with dd-mm-yyyy format..." type="text" value=""
+							data-content="The competition will be marked &quot;ended&quot; if this date has passed.">
+						</div>
+					</div>
+				</div>
+				<!-- section 2 -->
+				<div class="section">
+					<div></div>
+					<h3 class="ui header">Competition Banner</h3>
+					<div class="imgcont"></div>
+					<div class="field">
+						<label>Upload a decent image <i>(should be at least 960px-wide and 480px-high).</i></label>
+						<input name="file_banner" id="file" type="file" class="file">
+					</div>
+				</div>
+				<!-- section 3 -->
+				<div class="section">
+					<h3 class="ui header">Competition Details</h3>
+					<div class="ui message">
+						<b>You should include the following:</b>
+						<ul class="list">
+							<li>Official contact information</li>
+							<li>Link to the competition official website</li>
+						</ul>
+					</div>
+					<div class="ui yellow message nojs"><i class="warning icon"></i>You should activate JavaScript for better interactivity.</div>
+					<div class="field" id="ckeditcont"><div id="compdetailscont">
+						<textarea name="txt_compdetails" class="large" id="txt_compdetails"
+						placeholder="Add important details about the competition..."></textarea>
+					</div></div>
+				</div>
+				<!-- section 4 -->
+				<div class="section">
+					<h3 class="ui header">Milestone Entries</h3>
+					<div class="ui message nojs">
+						<b>How to register milestone entries:</b>
+						<ul class="list">
+							<li>Format for each entry is as follows: &nbsp; <i><code>DD-MM-YYYY: MilestoneMessage</code></i>.<br>
+							For example: &nbsp; <code>17-08-2015: Indonesian Independence Day Celebration</code></li>
+							<li>Entries are seperated by line break(s).</li>
+							<li>Our system will parse the entries upon submission.</li>
+						</ul>
+					</div>
+					<textarea name="txt_milestones" class="large" id="txt_milestones"
+					placeholder="Register milestone entries here..."></textarea>
+				</div>
+				<!-- submit button -->
+				<br>
+				<input value="Submit Entry" type="submit" class="ui teal button" onclick="appenddata()">
+				<input value="Preview" type="reset" class="ui button">
+			</div></form>
+			<!-- competition edit form end -->
+		</div>
+	</div>
+</div>	
+	
+<!-- initialize behaviors -->
+<script src="behav-main.js"></script>
+<script src="behav-editcompetition.js"></script>
+
+</body>
+</html>
